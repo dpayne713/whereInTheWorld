@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "nodemon src/app.js",
-    "start": "node scr/app.js",
+    "start": "node src/app.js",
     "sassWatch": "sass --watch src/dev/sass/style.scss src/public/stylesheets/style.css"
   },
   "author": "",
