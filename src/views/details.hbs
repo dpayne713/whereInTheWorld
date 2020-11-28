@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ea7a226074.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <title>Where In The World</title>
+</head>
+<body>
+    
+    <div class="body">
+
+        <div class="header__container">
+            
+            {{> header}}
+
+        </div>
+    <script src="/js/darkMode.js"></script>
+    
+        <div class="main">
+
+            <div class="main__search-details">
+                <a class="main__search-BACK" href="#" id="back"><i class="fas fa-arrow-left"></i> Back</a>
+                <a class="main__search-BACK" href="/"><i class="fas fa-home"></i> Home</a>
+
+            </div>
+
+            <div class="details">
+                <div class="details__image">
+                    <img src="{{data.image}}" alt="{{data.name}} image">
+                </div>
+                <div class="details__info">
+                    <div class="details__info-top">
+                        <h3 class="details__info-NAME">{{data.name}}</h3>
+                    </div>
+                    <div class="details__info-mid">
+
+                        <div class="details__info-mid-left">
+                            <p class="details__info-TITLE">Native Name: <span class="details__info-DATA">{{data.nativeName}}</span></p>
+                            <p class="details__info-TITLE">Population : <span class="details__info-DATA">{{data.population}}</span></p>
+                            <p class="details__info-TITLE">Region : <span class="details__info-DATA">{{data.region}}</span></p>
+                            <p class="details__info-TITLE">Sub Region : <span class="details__info-DATA">{{data.subRegion}}</span></p>
+                            <p class="details__info-TITLE">Capital : <span class="details__info-DATA">{{data.capital}}</span></p>
+                        </div>
+
+                        <div class="details__info-mid-right">
+                            <p class="details__info-TITLE">Top Level Domain: <span class="details__info-DATA">{{data.topLevelDomain}}</span></p>
+                            <p class="details__info-TITLE">Currencies: <span class="details__info-DATA">{{data.currencies}}</span></p>
+                            <p class="details__info-TITLE">Languages: <span class="details__info-DATA">{{data.languages}}</span></p>
+                            
+                        </div>
+
+                    </div>
+                    <div class="details__info-lower">
+                                <div class="details__info-lower-left">
+                                    <p class="details__info-TITLE">Border Countries: </p>
+                                </div>
+                                <div class="details__info-lower-right">
+
+                                     {{#each data.borders}}
+
+                                        
+                                            <a class="details__info-BORDER-LINKS-A"href="/details/{{this.code}}">
+                                            
+                                            <div class="details__info-BORDER-LINKS">{{this.name}}</div>
+                                            </a>
+                                        
+                                        
+                                    {{/each}}
+
+                                </div>
+
+                               
+                          
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/js/details-script.js"></script>
+
+
+</body>
+</html>
